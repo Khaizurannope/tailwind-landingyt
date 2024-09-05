@@ -18,7 +18,7 @@
       <nav class="w-full fixed top-0 bg-white z-10 dark:bg-slate-900">
         <div class="container mx-auto py-5 flex items-center justify-between">
           <div class="flex items-center gap-2">
-            <img class="w-8" src="./img/logo.jpg" alt="" />
+            <img class="w-8" src="img/logo.png" alt="" />
             <span class="text-2xl font-bold text-indigo-900 dark:text-white"
               >Portwind.</span
             >
@@ -178,10 +178,10 @@
             class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3"
           >
             <img class="w-10" src="img/icon.jpg" alt="" />
-            <h1 class="font-medium text-lg dark:text-white">UX / UI Design</h1>
+            <h1 class="font-medium text-lg dark:text-white">Web development</h1>
             <p class="text-gray-400">
-              I specialize in creating interactive websites for individuals and
-              small businesses.
+              Full-stack web development, including front-end and back-end
+              solutions.
             </p>
             <a class="text-indigo-600 font-semibold text-sm" href=""
               >Read More</a
@@ -206,10 +206,13 @@
             class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3"
           >
             <img class="w-10" src="img/icon.jpg" alt="" />
-            <h1 class="font-medium text-lg dark:text-white">UX / UI Design</h1>
+            <h1 class="font-medium text-lg dark:text-white">
+              Responsive Web Design
+            </h1>
             <p class="text-gray-400">
-              I specialize in creating interactive websites for individuals and
-              small businesses.
+              Designing websites that offer optimal viewing experiences across
+              all devices, from desktops to smartphones, ensuring accessibility
+              and engagement.
             </p>
             <a class="text-indigo-600 font-semibold text-sm" href=""
               >Read More</a
@@ -220,10 +223,13 @@
             class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3"
           >
             <img class="w-10" src="img/icon.jpg" alt="" />
-            <h1 class="font-medium text-lg dark:text-white">UX / UI Design</h1>
+            <h1 class="font-medium text-lg dark:text-white">
+              API Development & Integration
+            </h1>
             <p class="text-gray-400">
-              I specialize in creating interactive websites for individuals and
-              small businesses.
+              Building and integrating APIs to connect your website with
+              third-party services, such as payment gateways or social media
+              platforms.
             </p>
             <a class="text-indigo-600 font-semibold text-sm" href=""
               >Read More</a
@@ -234,10 +240,13 @@
             class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3"
           >
             <img class="w-10" src="img/icon.jpg" alt="" />
-            <h1 class="font-medium text-lg dark:text-white">UX / UI Design</h1>
+            <h1 class="font-medium text-lg dark:text-white">
+              Branding & Visual Design
+            </h1>
             <p class="text-gray-400">
-              I specialize in creating interactive websites for individuals and
-              small businesses.
+              Crafting a unique brand identity through cohesive visual design,
+              including logo creation, color schemes, and design elements that
+              reflect your business's mission.
             </p>
             <a class="text-indigo-600 font-semibold text-sm" href=""
               >Read More</a
@@ -248,10 +257,13 @@
             class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3"
           >
             <img class="w-10" src="img/icon.jpg" alt="" />
-            <h1 class="font-medium text-lg dark:text-white">UX / UI Design</h1>
+            <h1 class="font-medium text-lg dark:text-white">
+              Website Maintenance & Support
+            </h1>
             <p class="text-gray-400">
-              I specialize in creating interactive websites for individuals and
-              small businesses.
+              Website maintenance services, including security updates, bug
+              fixes, and performance enhancements to keep your site running
+              smoothly.
             </p>
             <a class="text-indigo-600 font-semibold text-sm" href=""
               >Read More</a
@@ -344,7 +356,7 @@
           <input
             class="p-2 w-full md:w-1/2 ring-1 ring-indigo-300 rounded-sm dark:bg-slate-800 dark:ring-0 dark:text-white"
             type="text"
-            placeholder="Name Surname"
+            placeholder="Username"
           />
           <input
             class="p-2 w-full md:w-1/2 ring-1 ring-indigo-300 rounded-sm dark:bg-slate-800 dark:ring-0 dark:text-white"
@@ -365,9 +377,48 @@
         </form>
       </div>
     </div>
+    <!-- footer -->
+    <div class="w-full bg-gray-800">
+      <div class="container mx-auto py-5 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <img class="w-8" src="img/logo.png" alt="" />
+          <span class="text-2xl font-bold text-white">Portwind.</span>
+        </div>
+        <span class="hidden md:block font-medium text-white"
+          >© 2022 Portwind. Designed by Dhiaraqi A Khaizuran</span
+        >
+        <div class="flex gap-2">
+          <img class="w-4 cursor-pointer" src="img/facebook.png" alt="" />
+          <img class="w-4 cursor-pointer" src="img/instagram.png" alt="" />
+          <img class="w-4 cursor-pointer" src="img/twitter.png" alt="" />
+          <img class="w-4 cursor-pointer" src="img/linkedin.png" alt="" />
+        </div>
+      </div>
+    </div>
 
     <!-- Scripts -->
     <script src="./app.js"></script>
     <script src="./autotype.js"></script>
+    <script>
+        const themeIcon = document.getElementById("themeIcon");
+        const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+      
+        function updateIcon() {
+          if (document.documentElement.classList.contains("dark")) {
+            themeIcon.src = "./img/sun.png"; // Ubah ke sun saat dark mode
+          } else {
+            themeIcon.src = "./img/moon.png"; // Kembali ke moon saat light mode
+          }
+        }
+      
+        themeIcon.addEventListener("click", () => {
+          document.documentElement.classList.toggle("dark");
+          updateIcon();
+        });
+      
+        // Set initial icon based on system preference or existing mode
+        updateIcon();
+      </script>
+      
   </body>
 </html>
