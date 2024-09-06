@@ -43,11 +43,12 @@
             </li>
           </ul>
           <img
-            id="moon"
-            src="./img/moon.png"
+            id="themeIcon"
+            src="./img/sun.png"
             class="hidden md:block w-5 cursor-pointer"
             alt=""
           />
+
           <div id="hamburger" class="space-y-1 md:hidden cursor-pointer z-20">
             <div class="w-6 h-0.5 bg-black"></div>
             <div class="w-6 h-0.5 bg-black"></div>
@@ -400,25 +401,28 @@
     <script src="./app.js"></script>
     <script src="./autotype.js"></script>
     <script>
-        const themeIcon = document.getElementById("themeIcon");
-        const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-      
-        function updateIcon() {
-          if (document.documentElement.classList.contains("dark")) {
-            themeIcon.src = "./img/sun.png"; // Ubah ke sun saat dark mode
-          } else {
-            themeIcon.src = "./img/moon.png"; // Kembali ke moon saat light mode
-          }
+      const themeIcon = document.getElementById("themeIcon");
+      const darkModeMediaQuery = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      );
+
+      function updateIcon() {
+        if (document.documentElement.classList.contains("dark")) {
+          console.log("Dark mode is active");
+          themeIcon.src = "./img/sun.png"; // Ubah ke sun saat dark mode
+        } else {
+          console.log("Light mode is active");
+          themeIcon.src = "./img/moon.png"; // Kembali ke moon saat light mode
         }
-      
-        themeIcon.addEventListener("click", () => {
-          document.documentElement.classList.toggle("dark");
-          updateIcon();
-        });
-      
-        // Set initial icon based on system preference or existing mode
+      }
+
+      themeIcon.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
         updateIcon();
-      </script>
-      
+      });
+
+      // Set initial icon based on system preference or existing mode
+      updateIcon();
+    </script>
   </body>
 </html>
